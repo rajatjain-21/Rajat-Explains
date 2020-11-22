@@ -9,7 +9,7 @@
 
 React has its own way of managing state. As we all know, that in React, our UI is the function of state, as state changes, the required components need to change accordingly. Now, for small applications, it can be done by passing on states as props to different child components, but as soon as the hierarchical tree gets bigger and deeper, it becomes a pain in the ass to manage states. Here redux comes to help.
 
-> Redux in version 16.3.0 introduced the [**Context API**](https://reactjs.org/docs/context.html), which makes redux a bit redundant for this use case of accessing the state from different parts of your app, so consider using the Context API instead of Redux, unless you need a specific feature that Redux provides.
+> React in version 16.3.0 introduced the [**Context API**](https://reactjs.org/docs/context.html), which makes redux a bit redundant for this use case of accessing the state from different parts of your app, so consider using the Context API instead of Redux, unless you need a specific feature that Redux provides.
 
 Redux is a way to manage an application state and moving to an external global store.
 

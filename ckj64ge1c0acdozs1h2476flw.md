@@ -68,12 +68,12 @@ Object.defineProperty( myObject, Symbol.iterator, {
 	enumerable: false,
 	writable: false,
 	configurable: true,
-	value: () => {
+	value: function() {
 		let _this  = this;
 		let idx = 0;
 		let keysArr = Object.keys( _this );
 		return {
-			next: function() {
+			next: () => {
 				return {
 					value: _this[keysArr[idx++]],
 					done: (idx > keysArr.length)

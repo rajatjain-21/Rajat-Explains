@@ -1,5 +1,8 @@
 ## Arrow vs Regular functions
 
+If you like to listen 🎧 to this article as a natural sounding 🔈 audio experience:
+
+%%[arrow-vs-regular-function-audio]
 Most of us know that the usual way of declaring/defining functions in most languages is a simple regular syntax. In Javascript too, for a long time you could declare functions only using this syntax
 ```javascript
 // Function Declaration

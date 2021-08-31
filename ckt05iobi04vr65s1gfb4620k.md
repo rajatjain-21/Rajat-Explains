@@ -160,7 +160,7 @@ const person = {
 ```
 It is just really simple and really small change, but it just drastically improves the speed with which you write your code 😀.
 
-<mark>**Note**: It only works when the variable has the same name as the key in object.
+**Note**: It only works when the variable has the same name as the key in object.
 
 <hr></hr>
 

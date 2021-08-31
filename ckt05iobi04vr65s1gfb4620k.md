@@ -1,6 +1,6 @@
 ## 4 must know cool features in Javascript
 
-We as frontend developers try to optimise the way our webpages work. Javascript, with its cool new features help us optimise the way we write code. In a cleaner, better and less clumsier way.
+We as frontend developers try to optimise the way our webpages work. Javascript, with its cool new features help us optimise the way we write code in a cleaner, better and less clumsier way.
 
 Following are the four cool features in JS, which every Javascript developer should know and they can come handy in scenarios where otherwise you have to write more code.
 

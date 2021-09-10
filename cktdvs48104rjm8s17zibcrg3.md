@@ -2,7 +2,7 @@
 
 <mark>**Disclaimer**: In this post, I am not going to implement Promise exactly the way it has been done in the JS specification. This is more likely a frontend interview question and focusses more on the functional aspect of Promise.</mark>
 
-You can find the complete code  [here](https://gist.github.com/rajatjain-21/339e1c52c5f957499ef73973da5a4236). To more of my code gists, checkout my  [Github Gists](**Link**) 
+You can find the complete code  [here](https://gist.github.com/rajatjain-21/339e1c52c5f957499ef73973da5a4236). To more of my code gists, checkout my  [Github Gists](https://rajatexplains.com/rajatjain-21) 
 
 When I started preparing for my interviews, I started looking for ways to implement my own Promise class (as this was a commonly asked question in good interviews). There are several places where people have implemented it, but, with all due respect, I didn't find a single one of them easy to wrap my head around. Furthermore, when you are asked to implement it in an interview, you need to come up with something that **you can keep in your head and that is not a lengthy implementation**. So, having read most of those blog posts and clearing my understanding about promises, I came up this **simple** implementation.
 

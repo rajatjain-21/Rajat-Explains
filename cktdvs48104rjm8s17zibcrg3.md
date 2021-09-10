@@ -264,7 +264,9 @@ promise
 
 <hr></hr>
 
-Want to read more interview posts, checkout my  [interview series](https://rajatexplains.com/series/fe-interview) .
+Want to read more interview posts, checkout my frontend interview series.
+
+%[https://rajatexplains.com/series/fe-interview]
 
 If you liked what you read 🧑‍🏫 and got to learn new things, do hit like 👍 and subscribe 🔖 to my newsletter to get instantly notified whenever I drop in new content.
 

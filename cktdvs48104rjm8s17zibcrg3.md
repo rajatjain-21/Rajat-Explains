@@ -4,7 +4,7 @@
 
 You can find the complete code  [here](https://gist.github.com/rajatjain-21/339e1c52c5f957499ef73973da5a4236). To more of my code gists, checkout my  [Github Gists](**Link**) 
 
-When I started preparing for my interviews, I started looking for ways to implement my own Promise class. There are several places where people have implemented it, but, with all due respect, I didn't find a single one of them easy to wrap my head around. Furthermore, when you are asked to implement it in an interview, you need to come up with something that **you can keep in your head and that is not a lengthy implementation**. So, having read most of those blog posts and clearing my understanding about promises, I came up this **simple** implementation.
+When I started preparing for my interviews, I started looking for ways to implement my own Promise class (as this was a commonly asked question in good interviews). There are several places where people have implemented it, but, with all due respect, I didn't find a single one of them easy to wrap my head around. Furthermore, when you are asked to implement it in an interview, you need to come up with something that **you can keep in your head and that is not a lengthy implementation**. So, having read most of those blog posts and clearing my understanding about promises, I came up this **simple** implementation.
 
 So, let's get started 💪 🚀
 

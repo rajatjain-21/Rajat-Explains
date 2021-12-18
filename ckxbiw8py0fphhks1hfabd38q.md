@@ -1,6 +1,6 @@
 ## useState hook - behind the hood
 
-### 🍾 Introduction
+### Introduction 🍾
 Hooks are special functions which let you "**hook into**" different React features. State, being one of its features, is hooked into by using the `useState` React hook.
 
 When you call `useState`, you are telling React that you want this component to remember something:
@@ -14,7 +14,7 @@ Every time your component renders, `useState` gives you an array containing two 
 1. The **state variable** (counter) with the value you stored.
 1. The **state setter function** (setCounter) which can update the state variable and trigger React to render the component again.
 
-### 🧑‍💻 `useState` behavior in practice
+### `useState` behavior in practice 🧑‍💻
 Here is how, it all happens in action:
 ```javascript
 const [index, setIndex] = useState(0);
@@ -31,7 +31,7 @@ const [index, setIndex] = useState(0);
 >
 Rendering just means React is calling our component. Render step is very much different from our render just means React is calling our component and definitely different than **mounting of our component in DOM**. **I'll talk more about that in my next blog. Stay tuned!**
 
-### 🚀 Motivation behind the blog
+### Motivation behind the blog 🚀
 Before learning anything, we should always understand the why behind it. Why should we have the knowledge of how `useState` or for that matter any hook is implemented internally.
 
 Ever wondered, how does React know which state to return? In other words, you defined a state variable naming it `counter` and another one `text` inside your component (see the snippet at the top), both of which are being generated along with their setters via `useState`. But, React internally does not predict what you will be naming your state variable. There is no “identifier” that is passed to useState, so how does it know which state to return when `count` is accessed? Does it rely on some magic like parsing your functions? 
@@ -45,7 +45,7 @@ React hooks rely on a **stable call order on every render of the same component*
 
 Well, this means that the order in which you call `useState` and define state variables, React internally takes care of that order only, maintaining an array of state pair <value, setter>. It also maintains the current pair index, which is set to 0 before rendering. Each time you call `useState`, React gives you the next state pair and increments the index. You can read more about this mechanism in  [React Hooks: Not Magic, Just Arrays](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e) .
 
-### 💪 Implementing `useState`
+### Implementing `useState` 💪
 In this section, I'll try to explain via code, how `useState` functions under the hood. This doesn’t use React but it gives you an idea of how the function works internally and help develop a significant mental model:
 
 ```javascript

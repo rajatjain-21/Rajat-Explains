@@ -25,7 +25,7 @@ In Redux, the whole state of the application is represented by one JS object cal
 ## Actions
 
 An Action is **a JS object that describes a change in a minimal way** (with just the information needed)
-```
+```javascript
 {
    type: "CLICKED_NAVBAR"
 }
@@ -41,14 +41,14 @@ The only requirement of an action object is having a _type_ property, whose valu
 ## Action types should be constants
 
 In a simple app an action type can be defined as a string, as I did above. When the app grows, it’s best to use constants:
-```
+```javascript
 const ADD_ITEM = 'ADD_ITEM"
 const action = { type: ADD_ITEM, title: 'My item' }
 ```
 
 
 and to separate actions in their own file, import them
-```
+```javascript
 import { ADD_ITEM, REMOVE_ITEM } from './actions'
 ```
 
@@ -56,7 +56,7 @@ import { ADD_ITEM, REMOVE_ITEM } from './actions'
 ## Action creators
 
 Action creators are functions that create actions:
-```
+```javascript
 function addItem(s) {
    return {
       type: ADD_ITEM,
@@ -66,13 +66,13 @@ function addItem(s) {
 ```
 
 You actually run action creators in combination with triggering the **dispatcher**:
-```
+```javascript
 dispatch(addItem('Books'))
 ```
 
 
 or by defining an action dispatcher function:
-```
+```javascript
 const dispatchAddItem = i => dispatch(addItem(i))
 dispatchAddItem('Books')
 ```
@@ -84,7 +84,7 @@ When an action is fired, something must happen, the state of the application mus
 ## What is a reducer?
 
 A reducer is a pure function which calculates the next State Tree based on the previous State Tree based on the action dispatched.
-```
+```javascript
 function = (currentState, action) => newState
 ```
 
@@ -111,7 +111,7 @@ Now let’s understand the core implementation of redux in an application.
 ## Simulation of a reducer
 
 **The state**
-```
+```javascript
 {
    list: [
     { title: "First Item"},
@@ -122,14 +122,14 @@ Now let’s understand the core implementation of redux in an application.
 ```
 
 **A list of actions**
-```
+```javascript
 { type: "ADD_ITEM", title: "Third Item" },
 { type: "REMOVE_ITEM", index: 1 },
 { type: "CHANGE_LIST_TITLE", title: "Dedicated Book list" }
 ```
 
 **A reducer for every part of the state**
-```
+```javascript
 //reducer for the title, that's why state is a string in the parameter
 const title = (state = '', action) => {
  if (action.type === "CHANGE_LIST_TITLE") {
@@ -156,7 +156,7 @@ const list = (state = [], action) => {
 ```
 
 **A reducer for the whole state**
-```
+```javascript
 const listManager = (state = {}, action) => {
  return {
   title: title(state.title, action),
@@ -176,29 +176,29 @@ The Store is an object which
 
 The Store is unique in an app and contains all the states in the app.
 Here is how a store for listManager app is created:
-```
+```javascript
 import { createStore } from 'redux'
 import listManager from './reducers'
 let store = createStore(listManager)
 ```
 
 You can also initialise the store from server-side data, just by passing a start state
-```
+```javascript
 let store = createStore(listManager, preExistingData)
 ```
 
 **Getting the state**
-```
+```javascript
 store.getState()
 ```
 
 **Update the state**
-```
+```javascript
 store.dispatch(addItem('Some Book'))
 ```
 
 **Listen to state changes**
-```
+```javascript
 const unsubscribe = store.subscribe(() => {
  const newState = store.getState()
 })

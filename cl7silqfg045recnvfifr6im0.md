@@ -1,7 +1,7 @@
 ## Make your async functions fast
 
 # Promises power many of our data fetching workflows 🔋
-To make Promises easier to work with, async functions introduce the `async` and `await` keywords which allow us to get the benefits of Promises — waiting for an async call to complete before continuing — without the mental overhead of chaining .then calls and nesting Promises.
+To make Promises easier to work with, async functions introduce the `async` and `await` keywords which allow us to get the benefits of Promises — waiting for an async call to complete before continuing — without the mental overhead of chaining `.then` calls and nesting Promises.
 
 > In this blog post, I am assuming that the readers are well aware of Promise and async-await and have worked with them. That is why I have focussed on the aspect of making async fast and not delved much into the basic code walkthrough of the applications of Promise and async-await
 

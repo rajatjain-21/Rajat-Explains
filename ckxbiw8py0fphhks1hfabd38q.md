@@ -1,4 +1,4 @@
-## useState hook - behind the hood
+# useState hook - behind the hood
 
 ### Introduction 🍾
 Hooks are special functions which let you "**hook into**" different React features. State, being one of its features, is hooked into by using the `useState` React hook.
@@ -27,9 +27,9 @@ const [index, setIndex] = useState(0);
 
 
 > 
-💡 What does rendering mean?
+💡 **What does rendering mean?**
 >
-Rendering just means React is calling our component. Render step is very much different from our render just means React is calling our component and definitely different than **mounting of our component in DOM**. **I'll talk more about that in my next blog. Stay tuned!**
+Rendering just means React is calling our component. Render step is different from Mounting. Render just means React is calling your component, it is different than **mounting of our component in DOM**. **I'll talk more about that in my next blog. Stay tuned!**
 
 ### Motivation behind the blog 🚀
 Before learning anything, we should always understand the why behind it. Why should we have the knowledge of how `useState` or for that matter any hook is implemented internally.

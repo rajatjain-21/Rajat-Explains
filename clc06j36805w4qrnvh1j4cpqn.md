@@ -2,22 +2,22 @@
 
 ### 🙋🏻‍♂️ User stories
 
-*   I want to pause videos, image carousels, or animations when the user leaves the page
+* I want to pause videos, image carousels, or animations when the user leaves the page
     
-*   I want to stop downloading a heavy module or media when the user is not on the page currently?
+* I want to stop downloading a heavy module or media when the user is not on the page currently?
     
-*   I want to run some operations or processes in background on my page when the user is away?
+* I want to run some operations or processes in background on my page when the user is away?
     
-*   How do I stop displaying live data from an API temporarily while the user is away.
+* How do I stop displaying live data from an API temporarily while the user is away.
     
 
 Multiple problems, ✨one solution✨ - [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API)
 
-This is a little-known web API that rates last fourth in awareness in the [State of JS Survey](https://2021.stateofjs.com/en-US/features).
+> This is a little-known web API that rates last fourth in awareness in the [State of JS Survey](https://2021.stateofjs.com/en-US/features).
 
 ### 🏅 Page Visibility API
 
-It lets you know when a user has left the page. To be precise, the API triggers an event whenever **the page visibility status changes**, either when the user minimizes or maximizes the window or switches the tab.
+This API lets you know when a user has left the page. To be precise, the API triggers an event whenever **the page visibility status changes**, either when the user minimizes or maximizes the window or switches the tab.
 
 In the past, one had to use gimmicks to know if a user had switched tabs or minimized the window. The most popular was using the `blur` and `focus` browser events. Using these events would result in something like the following:
 
@@ -33,31 +33,31 @@ window.addEventListener("blur", function () {
 });
 ```
 
-The problem with this approach is that when the user used to click the browser search bar or the console or an alert dialog or even the window border, `blur` event used to kick off. So, `blur` and `focus` only tell us if the page is active but not if the content of the page is hidden or visible.
+The problem with this approach is that even when the user used to click the browser search bar or the console or an alert dialog or even the window border, `blur` event used to kick off. So, `blur` and `focus` only tell us if the page is active but not if the content of the page is hidden or visible.
 
 #### 💪 How to use it
 
 The Page Visibility API brings two properties and an event to access the page visibility status:
 
-*   `document.hidden`  
-    It is globally available and read-only. Try to avoid it since it is now deprecated, but when accessed, it returns `true` if the page is hidden and `false` if it is visible.
+* `document.hidden`  
+    It is globally available and read-only. Try to **avoid** it since it is now **deprecated**, but when accessed, it returns `true` if the page is hidden and `false` if it is visible.
     
-*   `document.visibilityState`  
+* `document.visibilityState`  
     It is the updated version of `document.hidden`, but when accessed, it returns four possible values depending on the page visibility status
     
-    *   `visible`  
+    * `visible`  
         The page is visible, or to be exact, it isn’t minimized nor in another tab.
         
-    *   `hidden`  
+    * `hidden`  
         The page isn’t visible; it is minimized or in another tab.
         
-    *   `prerender`  
+    * `prerender`  
         This is the initial state of a visible page when it is prerendering. A page’s visibility status may start at `prerender` and then change to another state, but it can’t change from another state to `prerender`.
         
-    *   `unloaded`  
+    * `unloaded`  
         The page is being unloaded from memory.
         
-*   `visibilitychange`  
+* `visibilitychange`  
     It’s an event provided by the `document` object that is triggered when the page `visibilityState` changes.
     
 
